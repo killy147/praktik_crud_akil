@@ -50,3 +50,9 @@ return mysqli_affected_rows($conn);
     mysqli_query($conn, $query);
     return mysqli_affected_rows($conn);
     }
+
+    function cari($keyword){
+        $query = "SELECT * FROM data_siswa WHERE Nama LIKE '$%keyword%' OR NIS LIKE '$%keyword%' OR Email LIKE '$%keyword%' OR 
+        Jurusan LIKE '$%keyword%' OR ";
+        return query($query);
+    }
